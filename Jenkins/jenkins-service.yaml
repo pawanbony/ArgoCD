@@ -10,6 +10,11 @@ spec:
       nodePort: 30000
   selector:
     app: jenkins
+spec:
+  dnsConfig:
+    options:
+      - name: jenkins
+        value: "1"
 
 ---
 
@@ -24,3 +29,8 @@ spec:
       targetPort: 50000
   selector:
     app: jenkins
+spec:
+  dnsConfig:
+    options:
+      - name: jenkins-jnlp
+        value: "1"
